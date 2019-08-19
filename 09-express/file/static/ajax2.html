@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script>
+
+    console.log(1);
+    $.ajax({
+     method : "get"
+        ,url : "http://afei.fun:2333/api"
+        ,dataType : "json"
+        ,success(res){
+            console.log(res);
+        }
+        ,error(e){
+            console.log(e);
+        }
+    });
+
+</script>
+
+</body>
+</html>

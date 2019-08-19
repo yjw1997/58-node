@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="p"></p>
+
+<script>
+    //显示用户上一次访问我们网站的日期
+
+    let oP = document.getElementById("p");
+
+    //检测cookie是否存在time字段     "name=afei; age=18; sex=man"
+    let reg = /time=(\d+)/;
+
+    let result = document.cookie.match(reg);
+
+    if (result){
+        //匹配成功
+        let d = new Date(result[1]-0);
+        oP.innerHTML = `您上次访问我们网站是在：
+            ${d.getFullYear()}年
+            ${d.getMonth()+1}月
+            ${d.getDate()}日
+            ${d.getHours()}时
+            ${d.getMinutes()}分
+            ${d.getSeconds()}秒`;
+    }else{
+        //匹配失败
+        oP.innerHTML = "您是第一次访问我们网站。"
+    }
+
+    //设置最新的cookie
+    (function(){
+        let d = new Date().getTime();
+        let eDate = new Date(new Date().getTime()+30*24*60*60*1000);
+        document.cookie = `time=${d}; expires=${eDate.toUTCString()}`;
+    })();
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #info{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个展示老师信息的页面</p>
+    <ul>
+        <li>导航1</li>
+        <li>导航2</li>
+        <li>导航3</li>
+    </ul>
+
+
+
+    <!--老师信息区域开始-->
+    <%if(data){%>
+    <div id="info">
+        <p><%=data.name%>老师</p>
+        <p>今年<%=data.age%>岁</p>
+
+        <p>性别<%=data.sex?"男":"女"%></p>
+
+        <p><%=data.dec%></p>
+    </div>
+    <%}else{%>
+    <p>搜索的老师信息不存在</p>
+    <%}%>
+    <!--老师信息区域结束-->
+
+
+
+
+
+    <div id="footer">
+        这是网页的底部。
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    cookie
+        存储数据
+        以域名为单位，以浏览器为单位
+        设定过期时间，即使页面关闭了，也能存储着
+     */
+
+    let date = new Date(new Date().getTime() + 24*60*60*1000);
+
+    document.cookie = "name=afei; expires="+date.toUTCString(); //一次只能存一条键值对
+    document.cookie = "sex=man; expires="+date.toUTCString(); //一次只能存一条键值对
+    document.cookie = "age=18";
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

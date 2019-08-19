@@ -1,0 +1,17 @@
+# Project exclude paths
+/04-npm/afeifeifeifeifei/node_modules/
+/04-npm/project/node_modules/
+/05-爬虫/file/node_modules/
+/07-express/project/node_modules/
+/08-express/file/node_modules/
+/08-express/file2/node_modules/
+/08-express/file3/node_modules/
+/08-express/file4/node_modules/
+/09-express/file/node_modules/
+/10-ejs/file2/node_modules/
+/10-ejs/file3/node_modules/
+/11-mongodb/file/node_modules/
+/12-mongodb/file/node_modules/
+/13-mongodb/file/node_modules/
+/13-mongodb/file2/node_modules/
+/实战blog/blog/node_modules/

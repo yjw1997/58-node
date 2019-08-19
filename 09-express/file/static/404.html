@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>404,您访问的页面不存在！</h2>
+    <h3><span style="color: red">8</span>秒之后，返回首页</h3>
+
+    <script>
+
+        let span = document.querySelector("h3 span");
+
+        let num = 8;
+        setInterval(()=>{
+            span.innerText = --num;
+            if (num === 0){
+                window.location.href = "/";
+            }
+        },1000);
+
+    </script>
+</body>
+</html>
