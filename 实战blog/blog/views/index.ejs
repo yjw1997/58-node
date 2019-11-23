@@ -160,7 +160,9 @@
 
         <script>
             $(function(){
-                $(".article-content").text( $(".article-content").text() );
+                $(".article-content").each(function(){
+                    $(this).text( $(this).text() );
+                });
             });
         </script>
     </div>
